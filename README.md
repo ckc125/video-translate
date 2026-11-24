@@ -29,3 +29,38 @@ https://video-translate.xpuzi.com/
 
 
   <a href="https://github.com/ckc125/video-translate/releases"><img src="https://github.com/ckc125/video-translate/blob/main/screenshot_1794216331768.png" alt="X铺子视频翻译 视频配音工具" /></a>
+
+
+## 下载与安装
+
+桌面客户端在 [Releases](https://github.com/ckc125/video-translate/releases) 页面下载。
+
+### 选择版本
+
+| 平台 | 文件 | 说明 |
+| --- | --- | --- |
+| macOS Intel | `X-Translate-0.1.3-x64.dmg` | Intel 芯片 Mac 用这个 |
+| macOS Apple Silicon | `X-Translate-0.1.3-arm64.dmg` | M1 / M2 / M3 / M4 芯片 Mac 用这个（x64 版需另装 Rosetta 2） |
+| Windows | `X-Translate-Setup-0.1.3-x64.exe` | 安装版 |
+
+### ⚠️ macOS 首次运行（重要）
+
+当前版本采用 ad-hoc 签名、尚未经过 Apple 公证（notarization）。从浏览器下载的 App 会被 macOS 加上隔离属性，**首次双击会被 Gatekeeper 拦截**，提示：
+
+> 无法打开「X铺子·视频配音翻译」，因为 Apple 无法检查其是否包含恶意软件。
+
+这**不是 App 损坏**，按以下任一方式放行一次即可，之后双击都能正常运行：
+
+1. 在「应用程序」里**右键** App →「打开」→ 弹窗里再点「打开」；
+2. 或打开「系统设置 → 隐私与安全性」，拉到底部「已阻止打开」，点「仍要打开」；
+3. 或在终端执行：
+
+```bash
+xattr -dr com.apple.quarantine "/Applications/X铺子·视频配音翻译.app"
+```
+
+> 提示：若在 Apple Silicon 上安装了 x64 版本，系统会提示安装 Rosetta 2，按提示安装即可；更推荐直接使用 arm64 版本。
+
+### Windows
+
+直接运行 `X-Translate-Setup-0.1.3-x64.exe`，按向导安装即可。
